@@ -7,7 +7,7 @@
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
     "prettier": "prettier --write",
-    "test": "npm run lint"
+    "test": "jest"
   },
   "lint-staged": {
     "*.js": [
