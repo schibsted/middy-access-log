@@ -41,8 +41,7 @@ test('Middleware logs on success', async () => {
     await accessLogMiddleware.after(payload);
 
     expect(mockLogger.info).toHaveBeenCalledTimes(1);
-    expect(mockLogger.info)
-        .toMatchSnapshot();
+    expect(mockLogger.info).toMatchSnapshot();
 });
 
 test('Middleware logs on error', async () => {
