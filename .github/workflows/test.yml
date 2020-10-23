@@ -1,4 +1,4 @@
-name: "lint"
+name: "Lint & test"
 on: [pull_request]
 
 jobs:
