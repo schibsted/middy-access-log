@@ -1,5 +1,5 @@
 {
-  "name": "middy-access-log",
+  "name": "@schibsted/middy-access-log",
   "version": "0.0.1",
   "description": "Middy middleware for logging processed requests in an access-log like fashion",
   "main": "index.js",
