@@ -16,7 +16,7 @@ const logResponse = ({ logger, level, event, response, duration }) => {
     );
 };
 
-const accessLogMiddleware = ({ logger = console, level = 'info' }) => ({
+const accessLogMiddleware = ({ logger = console, level = 'info' } = {}) => ({
     before: async ({ event }) => {
         // eslint-disable-next-line no-param-reassign
         event.requestContext.requestStart = performance.now();
