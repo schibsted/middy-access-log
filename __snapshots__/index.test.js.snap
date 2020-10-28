@@ -55,6 +55,9 @@ exports[`Middleware logs on success 1`] = `
           "url": "/foobar",
         },
         "res": Object {
+          "headers": Object {
+            "someHeader": "someValue",
+          },
           "statusCode": 200,
         },
       },
