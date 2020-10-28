@@ -1,25 +1,25 @@
 const { performance } = require('perf_hooks');
-const omit = require('lodash.omit');
+const R = require('ramda');
 
 const logResponse = ({ logger, level, event, response, duration }) => {
     logger[level](
         {
             req: {
-                method: event.requestContext.httpMethod,
+                method: event.httpMethod,
                 url: event.path,
-                headers: omit(event.headers, ['cookie']),
+                headers: R.omit(['cookie'], event.headers),
             },
-            res: omit(response, ['body']),
+            res: R.omit(['body'], response),
             duration,
         },
-        `  --> ${event.requestContext.httpMethod} ${event.path} ${response.statusCode} ${duration}ns`
+        `  --> ${event.httpMethod} ${event.path} ${R.propOr('', 'statusCode', response)} ${duration}ns`
     );
 };
 
 const accessLogMiddleware = ({ logger = console, level = 'info' } = {}) => ({
     before: async ({ event }) => {
         // eslint-disable-next-line no-param-reassign
-        event.requestContext.requestStart = performance.now();
+        event.requestStart = performance.now();
     },
     after: async (handler) => {
         logResponse({
@@ -27,7 +27,7 @@ const accessLogMiddleware = ({ logger = console, level = 'info' } = {}) => ({
             level,
             event: { ...handler.event },
             response: handler.response,
-            duration: Math.round(performance.now() - handler.event.requestContext.requestStart) * 1000000,
+            duration: Math.round(performance.now() - handler.event.requestStart) * 1000000,
         });
     },
     onError: async (handler) => {
@@ -36,10 +36,10 @@ const accessLogMiddleware = ({ logger = console, level = 'info' } = {}) => ({
             level,
             event: { ...handler.event },
             response: handler.response,
-            duration: Math.round(performance.now() - handler.event.requestContext.requestStart) * 1000000,
+            duration: Math.round(performance.now() - handler.event.requestStart) * 1000000,
         });
 
-        return handler.error;
+        return handler;
     },
 });
 

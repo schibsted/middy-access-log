@@ -19,11 +19,9 @@ exports[`Middleware logs on error 1`] = `
           "method": "GET",
           "url": "/foobar",
         },
-        "res": Object {
-          "statusCode": 500,
-        },
+        "res": Object {},
       },
-      "  --> GET /foobar 500 0ns",
+      "  --> GET /foobar  0ns",
     ],
   ],
   "results": Array [
@@ -55,6 +53,9 @@ exports[`Middleware logs on success 1`] = `
           "url": "/foobar",
         },
         "res": Object {
+          "headers": Object {
+            "someHeader": "someValue",
+          },
           "statusCode": 200,
         },
       },
