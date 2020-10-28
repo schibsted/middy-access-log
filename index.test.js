@@ -2,6 +2,13 @@ const middy = require('@middy/core');
 const createError = require('http-errors');
 const middleware = require('./index');
 
+jest.mock('perf_hooks', () => {
+    const performanceMock = {
+        now: jest.fn().mockReturnValue(1),
+    };
+    return { performance: performanceMock };
+});
+
 test('Middleware logs on success', async () => {
     const handler = middy(async () => ({
         statusCode: 200,
