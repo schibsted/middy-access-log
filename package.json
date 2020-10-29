@@ -1,7 +1,7 @@
 {
   "name": "@schibsted/middy-access-log",
   "version": "0.1.0",
-  "description": "Middy middleware for logging processed requests in an access-log like fashion",
+  "description": "Middy middleware for logging processed requests in an access-log like fashion. Optimised for JSON loggers e.g. Bunyan or Pino.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
@@ -35,7 +35,10 @@
     "AWS Lambda",
     "Middy",
     "Access log",
-    "Logging"
+    "Logging",
+    "bunyan",
+    "pino",
+    "JSON logger"
   ],
   "author": "",
   "license": "GPL-3.0-or-later",
