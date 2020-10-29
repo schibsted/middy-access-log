@@ -1,4 +1,4 @@
-# Schibsted Middy access log middleware
+# Middy access log middleware
 
 #### Access log middleware for the middy framework, the stylish Node.js middleware engine for AWS Lambda
 
@@ -34,6 +34,8 @@ See the sample usage below.
 ```javascript
 const middy = require('@middy/core');
 const accessLog = require('@schibsted/middy-access-log');
+const bunyan = require('bunyan');
+const logger = bunyan.createLogger({name: "myapp"});
 
 const handler = middy(async () => ({
         statusCode: 200,
@@ -41,7 +43,7 @@ const handler = middy(async () => ({
     }));
 
 handler
-  .use(accessLog());
+  .use(accessLog({ logger }));
 ```
 
 
