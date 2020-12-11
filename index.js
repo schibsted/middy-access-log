@@ -1,13 +1,13 @@
 const { performance } = require('perf_hooks');
 const R = require('ramda');
 
-const logResponse = ({ logger, level, event, response, duration }) => {
+const logResponse = ({ logger, level, headersToSkip, event, response, duration }) => {
     logger[level](
         {
             req: {
                 method: event.httpMethod,
                 url: event.path,
-                headers: R.omit(['cookie'], event.headers),
+                headers: R.omit(headersToSkip, event.headers),
             },
             res: R.omit(['body'], response),
             duration,
@@ -16,7 +16,7 @@ const logResponse = ({ logger, level, event, response, duration }) => {
     );
 };
 
-const accessLogMiddleware = ({ logger = console, level = 'info' } = {}) => ({
+const accessLogMiddleware = ({ logger = console, level = 'info', headersToSkip = [] } = {}) => ({
     before: async ({ event }) => {
         // eslint-disable-next-line no-param-reassign
         event.requestStart = performance.now();
@@ -25,6 +25,7 @@ const accessLogMiddleware = ({ logger = console, level = 'info' } = {}) => ({
         logResponse({
             logger,
             level,
+            headersToSkip,
             event: { ...handler.event },
             response: handler.response,
             duration: Math.round(performance.now() - handler.event.requestStart) * 1000000,
@@ -34,6 +35,7 @@ const accessLogMiddleware = ({ logger = console, level = 'info' } = {}) => ({
         logResponse({
             logger,
             level,
+            headersToSkip,
             event: { ...handler.event },
             response: handler.response,
             duration: Math.round(performance.now() - handler.event.requestStart) * 1000000,
