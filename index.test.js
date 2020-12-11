@@ -99,7 +99,7 @@ test('Middleware skips sensitive headers on success', async () => {
     };
 
     handler.use(
-        middleware({ logger: mockLogger, headersToSkip: ['cookie', 'authentication', 'customRequestSignature'] })
+        middleware({ logger: mockLogger, excludeHeaders: ['cookie', 'authentication', 'customRequestSignature'] })
     );
 
     const event = {
@@ -137,7 +137,7 @@ test('Middleware skips sensitive headers on error', async () => {
     };
 
     handler.use(
-        middleware({ logger: mockLogger, headersToSkip: ['cookie', 'authentication', 'customRequestSignature'] })
+        middleware({ logger: mockLogger, excludeHeaders: ['cookie', 'authentication', 'customRequestSignature'] })
     );
     const event = {
         headers: {
