@@ -43,7 +43,7 @@ test('Middleware logs on success', async () => {
 
     await handler(event, {});
     expect(mockLogger.info).toHaveBeenCalledTimes(1);
-    expect(mockLogger.info).toMatchSnapshot();
+    expect(mockLogger.info.mock.calls[0]).toMatchSnapshot();
 });
 
 test('Middleware logs on error', async () => {
@@ -82,7 +82,7 @@ test('Middleware logs on error', async () => {
     );
 
     expect(mockLogger.info).toHaveBeenCalledTimes(1);
-    expect(mockLogger.info).toMatchSnapshot();
+    expect(mockLogger.info.mock.calls[0]).toMatchSnapshot();
 });
 
 test('Middleware skips sensitive headers on success', async () => {
@@ -123,7 +123,7 @@ test('Middleware skips sensitive headers on success', async () => {
 
     await handler(event, {});
     expect(mockLogger.info).toHaveBeenCalledTimes(1);
-    expect(mockLogger.info).toMatchSnapshot();
+    expect(mockLogger.info.mock.calls[0]).toMatchSnapshot();
 });
 
 test('Middleware skips sensitive headers on error', async () => {
@@ -165,5 +165,5 @@ test('Middleware skips sensitive headers on error', async () => {
     );
 
     expect(mockLogger.info).toHaveBeenCalledTimes(1);
-    expect(mockLogger.info).toMatchSnapshot();
+    expect(mockLogger.info.mock.calls[0]).toMatchSnapshot();
 });
