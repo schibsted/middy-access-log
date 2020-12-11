@@ -1,72 +1,105 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Middleware logs on error 1`] = `
-[MockFunction] {
-  "calls": Array [
-    Array [
-      Object {
-        "duration": 0,
-        "req": Object {
-          "headers": Object {
-            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-GB,en;q=0.9,en-US;q=0.8,pl;q=0.7,nb;q=0.6,no;q=0.5",
-            "connection": "keep-alive",
-            "host": "localhost:3000",
-            "upgrade-insecure-requests": "1",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
-          },
-          "method": "GET",
-          "url": "/foobar",
-        },
-        "res": Object {},
+Array [
+  Object {
+    "duration": 0,
+    "req": Object {
+      "headers": Object {
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "accept-encoding": "gzip, deflate, br",
+        "accept-language": "en-GB,en;q=0.9,en-US;q=0.8,pl;q=0.7,nb;q=0.6,no;q=0.5",
+        "connection": "keep-alive",
+        "cookie": "my cookie 1; my cookie 2",
+        "host": "localhost:3000",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
       },
-      "  --> GET /foobar  0ns",
-    ],
-  ],
-  "results": Array [
-    Object {
-      "type": "return",
-      "value": undefined,
+      "method": "GET",
+      "url": "/foobar",
     },
-  ],
-}
+    "res": Object {},
+  },
+  "  --> GET /foobar  0ns",
+]
 `;
 
 exports[`Middleware logs on success 1`] = `
-[MockFunction] {
-  "calls": Array [
-    Array [
-      Object {
-        "duration": 0,
-        "req": Object {
-          "headers": Object {
-            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-GB,en;q=0.9,en-US;q=0.8,pl;q=0.7,nb;q=0.6,no;q=0.5",
-            "connection": "keep-alive",
-            "host": "localhost:3000",
-            "upgrade-insecure-requests": "1",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
-          },
-          "method": "GET",
-          "url": "/foobar",
-        },
-        "res": Object {
-          "headers": Object {
-            "someHeader": "someValue",
-          },
-          "statusCode": 200,
-        },
+Array [
+  Object {
+    "duration": 0,
+    "req": Object {
+      "headers": Object {
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "accept-encoding": "gzip, deflate, br",
+        "accept-language": "en-GB,en;q=0.9,en-US;q=0.8,pl;q=0.7,nb;q=0.6,no;q=0.5",
+        "connection": "keep-alive",
+        "cookie": "my cookie 1; my cookie 2",
+        "host": "localhost:3000",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
       },
-      "  --> GET /foobar 200 0ns",
-    ],
-  ],
-  "results": Array [
-    Object {
-      "type": "return",
-      "value": undefined,
+      "method": "GET",
+      "url": "/foobar",
     },
-  ],
-}
+    "res": Object {
+      "headers": Object {
+        "someHeader": "someValue",
+      },
+      "statusCode": 200,
+    },
+  },
+  "  --> GET /foobar 200 0ns",
+]
+`;
+
+exports[`Middleware skips sensitive headers on error 1`] = `
+Array [
+  Object {
+    "duration": 0,
+    "req": Object {
+      "headers": Object {
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "accept-encoding": "gzip, deflate, br",
+        "accept-language": "en-GB,en;q=0.9,en-US;q=0.8,pl;q=0.7,nb;q=0.6,no;q=0.5",
+        "connection": "keep-alive",
+        "host": "localhost:3000",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
+      },
+      "method": "GET",
+      "url": "/foobar",
+    },
+    "res": Object {},
+  },
+  "  --> GET /foobar  0ns",
+]
+`;
+
+exports[`Middleware skips sensitive headers on success 1`] = `
+Array [
+  Object {
+    "duration": 0,
+    "req": Object {
+      "headers": Object {
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "accept-encoding": "gzip, deflate, br",
+        "accept-language": "en-GB,en;q=0.9,en-US;q=0.8,pl;q=0.7,nb;q=0.6,no;q=0.5",
+        "connection": "keep-alive",
+        "host": "localhost:3000",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
+      },
+      "method": "GET",
+      "url": "/foobar",
+    },
+    "res": Object {
+      "headers": Object {
+        "someHeader": "someValue",
+      },
+      "statusCode": 200,
+    },
+  },
+  "  --> GET /foobar 200 0ns",
+]
 `;

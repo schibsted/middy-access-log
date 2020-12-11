@@ -24,6 +24,7 @@ npm install --save @schibsted/middy-access-log
 
 - `logger` (defaults to `console`) - a logging function that is invoked with the current error as an argument. You can pass `false` if you don't want the logging to happen.
 - `level` (defaults to `info`) - log level to use for the log entries
+- `excludeHeaders` (array of header names, defaults to `[]`) - prevent specified headers from showing up in logs (e.g. user credentials)
 
 
 See the sample usage below.
