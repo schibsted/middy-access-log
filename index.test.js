@@ -75,11 +75,7 @@ test('Middleware logs on error', async () => {
         httpMethod: 'GET',
     };
 
-    await expect(handler(event, {})).rejects.toEqual(
-        expect.objectContaining({
-            error,
-        })
-    );
+    await expect(handler(event, {})).rejects.toEqual(error);
 
     expect(mockLogger.info).toHaveBeenCalledTimes(1);
     expect(mockLogger.info.mock.calls[0]).toMatchSnapshot();
@@ -158,11 +154,7 @@ test('Middleware skips sensitive headers on error', async () => {
         httpMethod: 'GET',
     };
 
-    await expect(handler(event, {})).rejects.toEqual(
-        expect.objectContaining({
-            error,
-        })
-    );
+    await expect(handler(event, {})).rejects.toEqual(error);
 
     expect(mockLogger.info).toHaveBeenCalledTimes(1);
     expect(mockLogger.info.mock.calls[0]).toMatchSnapshot();

@@ -40,8 +40,6 @@ const accessLogMiddleware = ({ logger = console, level = 'info', excludeHeaders 
             response: handler.response,
             duration: Math.round(performance.now() - handler.event.requestStart) * 1000000,
         });
-
-        return handler;
     },
 });
 
