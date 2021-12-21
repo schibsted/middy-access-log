@@ -1,7 +1,11 @@
 # Middy access log middleware
 
-#### Access log middleware for the middy framework, the stylish Node.js middleware engine for AWS Lambda
+![github checks](https://badgen.net/github/checks/schibsted/middy-access-log)
+![current version @ npm](https://badgen.net/npm/v/@schibsted/middy-access-log)
+![weekly downloads @ npm](https://badgen.net/npm/dw/@schibsted/middy-access-log)
+![minified size](https://badgen.net//bundlephobia/min/@schibsted/middy-access-log)
 
+#### Access log middleware for the middy framework, the stylish Node.js middleware engine for AWS Lambda
 
 This middleware logs processed requests in an access log like fashion.
 I suggest using it together with [@schibsted/middy-error-handler](https://github.com/schibsted/middy-error-handler)
@@ -9,7 +13,6 @@ I suggest using it together with [@schibsted/middy-error-handler](https://github
 This access log is optimised for JSON loggers e.g. [bunyan](https://github.com/trentm/node-bunyan) or [pino](https://getpino.io/)
 
 Sets headers in `after` and `onError` phases.
-
 
 ## Install
 
@@ -19,16 +22,13 @@ To install this middleware you can use NPM:
 npm install --save @schibsted/middy-access-log
 ```
 
-
 ## Options
 
 - `logger` (defaults to `console`) - a logging function that is invoked with the current error as an argument. You can pass `false` if you don't want the logging to happen.
 - `level` (defaults to `info`) - log level to use for the log entries
 - `excludeHeaders` (array of header names, defaults to `[]`) - prevent specified headers from showing up in logs (e.g. user credentials)
 
-
 See the sample usage below.
-
 
 ## Sample usage
 
@@ -46,7 +46,6 @@ const handler = middy(async () => ({
 handler
   .use(accessLog({ logger }));
 ```
-
 
 ## Contributing
 
