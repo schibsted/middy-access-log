@@ -4,7 +4,7 @@
   "description": "Middy middleware for logging processed requests in an access-log like fashion. Optimised for JSON loggers e.g. Bunyan or Pino.",
   "main": "index.js",
   "engines": {
-    "node": "^12.20.0 || ^14.13.1"
+    "node": ">=14"
   },
   "scripts": {
     "lint-fix": "eslint . --fix",
