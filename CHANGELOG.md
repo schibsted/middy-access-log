@@ -1,5 +1,13 @@
 
 
+### [4.0.1](https://github.com/schibsted/middy-access-log/compare/v4.0.0...v4.0.1) (2022-05-19)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @middy/core to v3 ([#101](https://github.com/schibsted/middy-access-log/issues/101)) ([849376f](https://github.com/schibsted/middy-access-log/commit/849376f39e4304a684b9fcb2e3b34cbef893ef8d))
+* **deps:** update linters ([#83](https://github.com/schibsted/middy-access-log/issues/83)) ([1bbf0fc](https://github.com/schibsted/middy-access-log/commit/1bbf0fcc0d56820979cfc03ad6770966e490819d))
+
 ## [4.0.0](https://github.com/schibsted/middy-access-log/compare/v3.1.0...v4.0.0) (2022-05-19)
 
 
