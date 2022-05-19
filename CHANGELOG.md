@@ -1,5 +1,33 @@
 
 
+## [4.0.0](https://github.com/schibsted/middy-access-log/compare/v3.1.0...v4.0.0) (2022-05-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* add Node 16 support, drop Node 12
+
+* config(renovate): remove node version restriction
+
+* config(github): run tests on correct Node versions
+
+### Features
+
+* update Node versions support ([#97](https://github.com/schibsted/middy-access-log/issues/97)) ([3d87f68](https://github.com/schibsted/middy-access-log/commit/3d87f68e6eebd91df527dede635f7ea61254b250))
+
+
+### Build System
+
+* **deps:** bump minimist from 1.2.5 to 1.2.6 ([#98](https://github.com/schibsted/middy-access-log/issues/98)) ([cb17767](https://github.com/schibsted/middy-access-log/commit/cb17767dc9e0d96f4b493fa1d5bd73006a0808e5))
+
+
+### Miscellaneous Chores
+
+* **deps:** pin dependencies ([#86](https://github.com/schibsted/middy-access-log/issues/86)) ([9a8966d](https://github.com/schibsted/middy-access-log/commit/9a8966db4085b37682464a2671df29184346a1a2))
+* **deps:** update dependency husky to v8 ([#96](https://github.com/schibsted/middy-access-log/issues/96)) ([c96e524](https://github.com/schibsted/middy-access-log/commit/c96e524160e44fe5e8c226ac2fbf395299cb2f0e))
+* **deps:** update dependency jest to v28 ([#92](https://github.com/schibsted/middy-access-log/issues/92)) ([7213c66](https://github.com/schibsted/middy-access-log/commit/7213c6638096b8461dc90610403b71a1d8a1b2e0))
+* **deps:** update release-related tools ([#102](https://github.com/schibsted/middy-access-log/issues/102)) ([3ff2fbe](https://github.com/schibsted/middy-access-log/commit/3ff2fbe627780d645efad5fb7f2342261f614e3e))
+
 ## [3.1.0](https://github.com/schibsted/middy-access-log/compare/v3.0.0...v3.1.0) (2022-03-18)
 
 
