@@ -47,7 +47,7 @@
   },
   "homepage": "https://github.com/schibsted/middy-access-log#readme",
   "devDependencies": {
-    "@babel/eslint-parser": "7.17.0",
+    "@babel/eslint-parser": "7.18.9",
     "@commitlint/cli": "17.0.0",
     "@commitlint/config-conventional": "17.0.0",
     "@middy/core": "3.0.3",
