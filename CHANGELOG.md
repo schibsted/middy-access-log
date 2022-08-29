@@ -1,5 +1,25 @@
 
 
+### [4.0.2](https://github.com/schibsted/middy-access-log/compare/v4.0.1...v4.0.2) (2022-08-29)
+
+
+### Build System
+
+* **deps:** bump got and release-it ([#112](https://github.com/schibsted/middy-access-log/issues/112)) ([5297d2c](https://github.com/schibsted/middy-access-log/commit/5297d2cd77da43000c059f893603682107d19f94))
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @babel/eslint-parser to v7.18.9 ([#105](https://github.com/schibsted/middy-access-log/issues/105)) ([5c5c313](https://github.com/schibsted/middy-access-log/commit/5c5c3139851d231498f09d33e481d1e320c235d0))
+* **deps:** update dependency @middy/core to v3.1.0 ([#107](https://github.com/schibsted/middy-access-log/issues/107)) ([41fc0a4](https://github.com/schibsted/middy-access-log/commit/41fc0a47ad3698d517c11410e4dc08f8291c9cd3))
+* **deps:** update dependency @middy/core to v3.3.0 ([#114](https://github.com/schibsted/middy-access-log/issues/114)) ([1a72b32](https://github.com/schibsted/middy-access-log/commit/1a72b32d707cfb050fc2ddf8fc5a24b831f1bd8e))
+* **deps:** update dependency eslint to v8.23.0 ([#115](https://github.com/schibsted/middy-access-log/issues/115)) ([7964699](https://github.com/schibsted/middy-access-log/commit/79646993871dce53d9ac0bf6edfc86f126561b9b))
+* **deps:** update dependency jest to v28.1.3 ([#108](https://github.com/schibsted/middy-access-log/issues/108)) ([6b5dd2a](https://github.com/schibsted/middy-access-log/commit/6b5dd2ae7e782b9e1008694a707dd4af3bad86af))
+* **deps:** update dependency jest to v29 ([#113](https://github.com/schibsted/middy-access-log/issues/113)) ([642a568](https://github.com/schibsted/middy-access-log/commit/642a5680c3509e47d872cb6e0a3139ece8729820))
+* **deps:** update linters ([#103](https://github.com/schibsted/middy-access-log/issues/103)) ([d58f611](https://github.com/schibsted/middy-access-log/commit/d58f61133cd24ecdab33d88ecb0742fa9fe62bb7))
+* **deps:** update linters ([#106](https://github.com/schibsted/middy-access-log/issues/106)) ([7d81c0d](https://github.com/schibsted/middy-access-log/commit/7d81c0dda15f3cce338064e359192025e3ca6b99))
+* **deps:** update release-related tools ([#104](https://github.com/schibsted/middy-access-log/issues/104)) ([a6ec4b0](https://github.com/schibsted/middy-access-log/commit/a6ec4b0f1c48ed686e4fd35f27460ba15233305d))
+
 ### [4.0.1](https://github.com/schibsted/middy-access-log/compare/v4.0.0...v4.0.1) (2022-05-19)
 
 
