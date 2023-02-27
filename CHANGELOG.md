@@ -1,5 +1,20 @@
 
 
+### [4.0.3](https://github.com/schibsted/middy-access-log/compare/v4.0.2...v4.0.3) (2023-02-27)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @babel/eslint-parser to v7.19.1 ([#120](https://github.com/schibsted/middy-access-log/issues/120)) ([6af182a](https://github.com/schibsted/middy-access-log/commit/6af182a4ca254033539004272bcef96b8a081f78))
+* **deps:** update dependency @middy/core to v3.6.2 ([#118](https://github.com/schibsted/middy-access-log/issues/118)) ([363fb74](https://github.com/schibsted/middy-access-log/commit/363fb7464a016d98e2831b89946428508fce8bf3))
+* **deps:** update dependency @middy/core to v4 ([#128](https://github.com/schibsted/middy-access-log/issues/128)) ([2ee2224](https://github.com/schibsted/middy-access-log/commit/2ee2224b847710eba84a694132db69d84ea91893))
+* **deps:** update dependency husky to v8.0.2 ([#124](https://github.com/schibsted/middy-access-log/issues/124)) ([9237e57](https://github.com/schibsted/middy-access-log/commit/9237e5762c682fdddd91756c051b7f3fa935b2d4))
+* **deps:** update dependency husky to v8.0.3 ([#129](https://github.com/schibsted/middy-access-log/issues/129)) ([206adf1](https://github.com/schibsted/middy-access-log/commit/206adf1c30ca24b9d16bcb7166ec80e9cd4a4e37))
+* **deps:** update dependency jest to v29.4.3 ([#117](https://github.com/schibsted/middy-access-log/issues/117)) ([7463cc1](https://github.com/schibsted/middy-access-log/commit/7463cc123ddbfdeb904ee1386b7a8af2a265a60b))
+* **deps:** update dependency parse-url to 8.1.0 [security] ([#121](https://github.com/schibsted/middy-access-log/issues/121)) ([fb28572](https://github.com/schibsted/middy-access-log/commit/fb28572079ad3652a89ff4e739d74d807640edb2))
+* **deps:** update linters ([#119](https://github.com/schibsted/middy-access-log/issues/119)) ([cd8a299](https://github.com/schibsted/middy-access-log/commit/cd8a2991947d79d39ed26ab81dc3ed5b4d06eb38))
+* **deps:** update release-related tools ([#116](https://github.com/schibsted/middy-access-log/issues/116)) ([5e3f5e0](https://github.com/schibsted/middy-access-log/commit/5e3f5e0c2f06cd55de229013e25fb15073010cae))
+
 ### [4.0.2](https://github.com/schibsted/middy-access-log/compare/v4.0.1...v4.0.2) (2022-08-29)
 
 
